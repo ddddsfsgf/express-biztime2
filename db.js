@@ -3,7 +3,7 @@
 const { Client } = require("pg");
 const { env } = require("process");
 
-let DB_URI = env.DATABASE_URL || "postgresql://ddebernardo:General1!@localhost:5432/biztime";
+let DB_URI = env.DATABASE_URL || "postgresql:///biztime";
 if (env.NODE_ENV === "test")
     DB_URI += "_test";
 
